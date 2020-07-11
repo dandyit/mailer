@@ -1,0 +1,36 @@
+doctype html 
+html 
+    head 
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+            title Natours #{title}
+
+    body 
+
+    main.main
+        .login-form.contact
+            h2.heading-secondary.ma-bt-lg Log into your account
+            form.form(method='POST' action='/send')
+                
+                .form__group
+                    label.form__label(for='name') Email Subject
+                    input.form__input#name(type='text',name='subject',placeholder="Please write here email subject" required)
+                .form__group
+                    label.form__label(for='email') Email address
+                    input#email.form__input(type='email',name='email' placeholder='you@example.com', required)
+                .form__group
+                    label.form__label(for='name') Email Text
+                    input.form__input#name(type='text',name='text',placeholder="Please write your text here" required)
+                .form__group
+                    button.btn.btn--green(type='submit') SignUp
+
+    
+    //- script(src='/js/mapBox.js')
+    script(src='/js/login.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+    //- script(src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js')
+    //- script(src='/js/bundle.js');
